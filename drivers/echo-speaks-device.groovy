@@ -78,6 +78,8 @@ metadata {
         command "doNotDisturbOff"
         // command "followUpModeOn"
         // command "followUpModeOff"
+        command "setGuardAway"
+        command "setGuardHome"
         command "setAlarmVolume", ["number"]
         command "resetQueue"
         command "playWeather", ["number", "number"]
@@ -1179,6 +1181,14 @@ def unmute() {
             }
         }
     }
+}
+
+def setGuardAway() {
+    parent?.setGuardAway()
+}
+
+def setGuardHome() {
+    parent?.setGuardHome()
 }
 
 def setMute(muteState) {
